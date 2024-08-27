@@ -8,8 +8,8 @@ const dbConnection = require("./config/db.config");
 const authRoute = require("./routes/auth.routes");
 const root = require("./routes/root.routes");
 
-const errorRoute = require("../src/routes/error.routes");
-const corsOptions = require("../src/config/cors.config");
+const errorRoute = require("./routes/error.routes");
+const corsOptions = require("./config/cors.config");
 const errorHandler = require("./middleware/errorHandler.middleware");
 
 const v1Index = require("./routes/v1/index.routes");
@@ -45,3 +45,5 @@ app.listen(PORT, function () {
   dbConnection();
   console.log(`Server is running on PORT: ${PORT}`);
 });
+
+module.exports = app;
