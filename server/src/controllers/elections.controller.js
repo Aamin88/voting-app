@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const Elections = require("../model/elections.model");
+const Elections = require("../model/election.model");
 
 /**
  * @Desc    Create an election

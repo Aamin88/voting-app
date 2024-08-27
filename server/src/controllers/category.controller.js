@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const Categories = require("../model/category.model");
+const Categories = require("../model/position.model");
 
 /**
  * @Desc    Add category
