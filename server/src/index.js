@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const dbConnection = require("./config/db.config");
 const authRoute = require("./routes/auth.routes");
 const root = require("./routes/root.routes");
+const credentials = require("./middleware/credentials.middleware");
 
 const errorRoute = require("./routes/error.routes");
 const corsOptions = require("./config/cors.config");
@@ -19,9 +20,9 @@ const PORT = process.env.PORT;
 const app = express();
 
 // middlewares
+app.use(credentials);
 app.use(bodyParser.json());
-// app.use(cors(corsOptions));
-app.use(cors({ origin: '*', credentials: true }));
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(
   express.urlencoded({
