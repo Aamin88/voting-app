@@ -22,7 +22,7 @@ const app = express();
 // middlewares
 app.use(credentials);
 app.use(bodyParser.json());
-app.use(cors(corsOptions));
+app.use(cors("*"));
 app.use(cookieParser());
 app.use(
   express.urlencoded({
