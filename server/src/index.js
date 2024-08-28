@@ -20,7 +20,8 @@ const app = express();
 
 // middlewares
 app.use(bodyParser.json());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({ origin: '*', credentials: true }));
 app.use(cookieParser());
 app.use(
   express.urlencoded({
