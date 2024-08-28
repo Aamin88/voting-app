@@ -4,7 +4,8 @@ const baseURL = "https://voting-app-r8ql.vercel.app";
 // const baseURL: "http://localhost:5001";
 
 export default axios.create({
-  baseURL
+  baseURL,
+  withCredentials: true,
 });
 
 export const axiosPrivate = axios.create({
