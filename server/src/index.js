@@ -21,7 +21,8 @@ const app = express();
 
 // middlewares
 app.use(credentials);
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors("*"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(
